@@ -1,5 +1,11 @@
 # 당근마켓 첫 화면 clone
 
+### 결과 화면
+
+<img src="./img/0.gif" width=300px>
+
+
+
 > 언젠가 나중에 찾아볼만한 것들 정리
 
 ### 1. segmented control 으로 뷰 전환하기
