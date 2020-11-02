@@ -43,6 +43,29 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 그래서 지금은 그냥 흰 배경으로만 만들고 놔뒀는데 라이브러리 쓰려면 [XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip) 쓰면 된다
 
+### 2-1. 그래서 써봤다 XLPagerTabStrip!
+
+*  `sudo gem install cocoapods`
+
+* 프로젝트 폴더에서 `pod init`
+
+* `vi podfile`
+
+  ```bash
+  # Uncomment the next line to define a global platform for your project
+  # platform :ios, '9.0'
+  
+  target 'carrot-market' do
+    # Comment the next line if you don't want to use dynamic frameworks
+    use_frameworks!
+  
+    # Pods for carrot-market
+          pod 'XLPagerTabStrip', '~> 9.0' //이거 추가
+  end
+  ```
+
+* `pod install`
+
 
 
 ### 3. imageView나 button 등 rounding주기
@@ -84,3 +107,20 @@ self.itemImageView.clipsToBounds = true
   }
 ```
 
+
+
+### 더 하고 싶은 것
+
+segemented view 라이브러리 사용
+
+​	https://yagom.net/forums/topic/pageviewcontroller%EB%A1%9C-ui-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/
+
+맨 왼쪽 위 v 버튼 클릭 시 토글 팝업 띄우기
+
+table view 스크롤하면 segmented control 상단 뷰 스크롤되어 사라지게 만들기
+
+​	https://stackoverflow.com/questions/46692316/how-to-hide-a-uiview-while-scrolling
+
+​	https://stackoverflow.com/questions/40415590/hide-show-top-view-when-scroll-in-swift
+
+​	https://stackoverflow.com/questions/32537535/scroll-parent-scroll-view-when-child-scroll-view-reaches-end

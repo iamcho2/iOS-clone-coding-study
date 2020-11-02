@@ -70,6 +70,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="3qd-YV-9FM"/>
                                     <constraint firstAttribute="height" constant="50" id="hmF-aH-eWm"/>
                                 </constraints>
                                 <segments>
@@ -383,6 +384,7 @@
                     </view>
                     <connections>
                         <outlet property="enterBtn" destination="ptS-BX-TJX" id="rZD-Gd-HuX"/>
+                        <outlet property="moreInfoBtn" destination="ghu-mk-fHo" id="CU9-4r-K0p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jls-1V-oOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

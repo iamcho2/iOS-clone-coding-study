@@ -21,21 +21,23 @@ class ViewController: UIViewController {
         tradingContainer.alpha = 1.0
         neighborContainer.alpha = 0.0
         
+        
         segmentedControl.addUnderlineForSelectedSegment()
         
     }
 
     @IBAction func didIndexChanged(_ sender: UISegmentedControl) {
-        segmentedControl.changeUnderlinePosition()
         
         switch sender.selectedSegmentIndex {
         case 0:
             tradingContainer.alpha = 1.0
             neighborContainer.alpha = 0.0
             categoryBtn.isHidden = false
+            segmentedControl.changeUnderlinePosition()
             break
         case 1:
             categoryBtn.isHidden = true
+            segmentedControl.changeUnderlinePosition()
             tradingContainer.alpha = 0.0
             neighborContainer.alpha = 1.0
             break
