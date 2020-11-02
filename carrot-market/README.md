@@ -2,7 +2,7 @@
 
 ### 결과 화면
 
-<img src="./img/0.gif" width=300px>
+<img src="./img/4.gif" width=300px>
 
 
 
