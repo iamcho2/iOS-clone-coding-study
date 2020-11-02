@@ -4,7 +4,7 @@
 
 ### 1. segmented control 으로 뷰 전환하기
 
-<img src="./img/2.gif" style="zoom:50%;" />
+<img src="./img/2.gif" style="width:300px" />
 
 segmented control + container view 조합
 
@@ -14,7 +14,7 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 ### + segmented control로 뷰 전환할 때 상단 버튼 하나 없애기
 
-<img src="./img/3.gif" style="zoom:50%;" />
+<img src="./img/3.gif" style="width:300px" />
 
 상단 버튼 3개를 stack view로 합쳐놓고, segment index가 0일때 1일때 button의 isHidden값을 true, false 전환
 
@@ -51,7 +51,7 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 **결과 화면**
 
-<img src="./img/1.gif" style="zoom:50%;" />
+<img src="./img/1.gif" style="width:300px" />
 
 **설치**
 
@@ -88,7 +88,7 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 * segmented control 이 있을 자리에 collection view 추가해주고 ButtonBarView 클래스 지정
 
-  <img src="./img/2.png" style="zoom:50%;" />
+  <img src="./img/2.png" style="width:300px" />
 
 * container view 있던 자리에 scroll view 추가
 
