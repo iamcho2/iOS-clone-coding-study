@@ -4,6 +4,8 @@
 
 ### 1. segmented control 으로 뷰 전환하기
 
+<img src="./img/2.gif" style="zoom:50%;" />
+
 segmented control + container view 조합
 
 container view는 segment 개수대로 겹쳐서 배치해준 후 outlet 연결
@@ -11,6 +13,8 @@ container view는 segment 개수대로 겹쳐서 배치해준 후 outlet 연결
 segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 ### + segmented control로 뷰 전환할 때 상단 버튼 하나 없애기
+
+<img src="./img/3.gif" style="zoom:50%;" />
 
 상단 버튼 3개를 stack view로 합쳐놓고, segment index가 0일때 1일때 button의 isHidden값을 true, false 전환
 
@@ -45,6 +49,12 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 ### 2-1. 그래서 써봤다 XLPagerTabStrip!
 
+**결과 화면**
+
+<img src="./img/1.gif" style="zoom:50%;" />
+
+**설치**
+
 *  `sudo gem install cocoapods`
 
 * 프로젝트 폴더에서 `pod init`
@@ -66,7 +76,75 @@ segment index값에 따라 case문으로 alpha값을 0이나 1로 조정
 
 * `pod install`
 
+**적용**
 
+* `import XLPagerTabStrip`
+
+* ```swift
+  class SecondTradingViewController: UIViewController {
+    에서 UIViewController말고 ButtonBarPagerTabStripViewController 상속받아줌
+  class SecondTradingViewController: ButtonBarPagerTabStripViewController {
+  ```
+
+* segmented control 이 있을 자리에 collection view 추가해주고 ButtonBarView 클래스 지정
+
+  <img src="./img/2.png" style="zoom:50%;" />
+
+* container view 있던 자리에 scroll view 추가
+
+* main view controller에 아래 함수 추가
+
+  ```swift
+  override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+    let child1 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "firstChildViewController") as! firstChildViewController
+    child1.childNumber = "One"
+    let child2 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondChildViewController") as! SecondChildViewController
+    child2.childNumber = "Two"
+    return [child1, child2]
+  }
+  ```
+
+* child view controller 만들고 거기에도 `import XLPagerTabStrip`
+
+* 각 child view controller의 swift file에
+
+  * IndicatorInfoProvider 상속받기
+
+    ```swift
+    class ChildViewController: UIViewController, IndicatorInfoProvider {
+    ```
+
+  * childNumber 변수 추가 `var childNumber: String = ""`
+
+  * indicatorInfo() 함수 추가 (IndicatorInfoProvider 프로토콜 필수 구현 함수)
+
+    ```swift
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "\(childNumber)")
+    }
+    ```
+
+    
+
+* 디자인 커스텀하기
+
+  ```swift
+  override func viewDidLoad() {
+  
+          // Do any additional setup after loading the view.
+          settings.style.buttonBarBackgroundColor = .white
+          settings.style.buttonBarItemBackgroundColor = .clear
+          settings.style.selectedBarBackgroundColor = UIColor(red: 234/255.0, green: 234/255.0, blue: 234/255.0, alpha: 1.0)
+          settings.style.selectedBarBackgroundColor = .black
+          settings.style.buttonBarItemTitleColor = .black
+          settings.style.selectedBarHeight = 3.0
+          
+    //꼭 viewDidLoad() 위에 써줘야 함
+          super.viewDidLoad() 
+      }
+  ```
+
+  
 
 ### 3. imageView나 button 등 rounding주기
 
@@ -110,10 +188,6 @@ self.itemImageView.clipsToBounds = true
 
 
 ### 더 하고 싶은 것
-
-segemented view 라이브러리 사용
-
-​	https://yagom.net/forums/topic/pageviewcontroller%EB%A1%9C-ui-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0/
 
 맨 왼쪽 위 v 버튼 클릭 시 토글 팝업 띄우기
 

@@ -6,5 +6,5 @@ target 'carrot-market' do
   use_frameworks!
 
   # Pods for carrot-market
-	pod 'XLPagerTabStrip', '~> 9.0'
+	pod 'XLPagerTabStrip'
 end

@@ -1,13 +1,14 @@
 //
-//  NeighborViewController.swift
+//  SecondChildViewController.swift
 //  carrot-market
 //
-//  Created by 초이 on 2020/11/01.
+//  Created by 초이 on 2020/11/02.
 //
 
 import UIKit
+import XLPagerTabStrip
 
-class NeighborViewController: UIViewController {
+class SecondChildViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var moreInfoBtn: UIButton!
     @IBOutlet weak var enterBtn: UIButton!
     
@@ -17,6 +18,8 @@ class NeighborViewController: UIViewController {
         .underlineStyle: NSUnderlineStyle.single.rawValue]
            //.double.rawValue, .thick.rawValue
     
+    var childNumber: String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,4 +32,10 @@ class NeighborViewController: UIViewController {
         moreInfoBtn.setAttributedTitle(attributeString, for: .normal)
     }
     
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+
+        return IndicatorInfo(title: "\(childNumber)")
+
+      }
+
 }

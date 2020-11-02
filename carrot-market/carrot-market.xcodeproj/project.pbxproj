@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,10 @@
 		565BF2CC254E72E300442ECD /* NeighborViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BF2CB254E72E300442ECD /* NeighborViewController.swift */; };
 		565BF2CF254E766900442ECD /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BF2CE254E766900442ECD /* ItemTableViewCell.swift */; };
 		565BF2D2254E76EC00442ECD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BF2D1254E76EC00442ECD /* Item.swift */; };
+		56D12BA1254FEBCB004DE8DE /* SecondTradingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BA0254FEBCB004DE8DE /* SecondTradingViewController.swift */; };
+		56D12BAB254FF092004DE8DE /* firstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BAA254FF092004DE8DE /* firstChildViewController.swift */; };
+		56D12BAE254FF0CB004DE8DE /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */; };
+		56D12BB6254FF898004DE8DE /* SecondMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BB5254FF898004DE8DE /* SecondMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		565BF2CB254E72E300442ECD /* NeighborViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighborViewController.swift; sourceTree = "<group>"; };
 		565BF2CE254E766900442ECD /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		565BF2D1254E76EC00442ECD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		56D12BA0254FEBCB004DE8DE /* SecondTradingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTradingViewController.swift; sourceTree = "<group>"; };
+		56D12BAA254FF092004DE8DE /* firstChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstChildViewController.swift; sourceTree = "<group>"; };
+		56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
+		56D12BB5254FF898004DE8DE /* SecondMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMainViewController.swift; sourceTree = "<group>"; };
 		BCCCB9C80E005A7FF231939E /* Pods-carrot-market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carrot-market.release.xcconfig"; path = "Target Support Files/Pods-carrot-market/Pods-carrot-market.release.xcconfig"; sourceTree = "<group>"; };
 		DC5541CAB8EC6896FC05D4BF /* Pods_carrot_market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carrot_market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +95,10 @@
 				565BF2D1254E76EC00442ECD /* Item.swift */,
 				565BF2C8254E72D900442ECD /* TradingViewController.swift */,
 				565BF2CB254E72E300442ECD /* NeighborViewController.swift */,
+				56D12BB5254FF898004DE8DE /* SecondMainViewController.swift */,
+				56D12BA0254FEBCB004DE8DE /* SecondTradingViewController.swift */,
+				56D12BAA254FF092004DE8DE /* firstChildViewController.swift */,
+				56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */,
 				560A09AA254BE224008A4DCB /* Assets.xcassets */,
 				560A09AC254BE224008A4DCB /* LaunchScreen.storyboard */,
 				560A09AF254BE224008A4DCB /* Info.plist */,
@@ -100,7 +112,6 @@
 				381837DEEA453B3DCE1447EC /* Pods-carrot-market.debug.xcconfig */,
 				BCCCB9C80E005A7FF231939E /* Pods-carrot-market.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,13 +229,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D12BB6254FF898004DE8DE /* SecondMainViewController.swift in Sources */,
+				56D12BA1254FEBCB004DE8DE /* SecondTradingViewController.swift in Sources */,
 				560A09A6254BE224008A4DCB /* ViewController.swift in Sources */,
 				560A09A2254BE223008A4DCB /* AppDelegate.swift in Sources */,
 				565BF2CC254E72E300442ECD /* NeighborViewController.swift in Sources */,
 				565BF2C9254E72D900442ECD /* TradingViewController.swift in Sources */,
 				565BF2D2254E76EC00442ECD /* Item.swift in Sources */,
+				56D12BAB254FF092004DE8DE /* firstChildViewController.swift in Sources */,
 				565BF2CF254E766900442ECD /* ItemTableViewCell.swift in Sources */,
 				560A09A4254BE224008A4DCB /* SceneDelegate.swift in Sources */,
+				56D12BAE254FF0CB004DE8DE /* SecondChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
