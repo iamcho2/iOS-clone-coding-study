@@ -22,6 +22,9 @@
 		56D12BAB254FF092004DE8DE /* firstChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BAA254FF092004DE8DE /* firstChildViewController.swift */; };
 		56D12BAE254FF0CB004DE8DE /* SecondChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */; };
 		56D12BB6254FF898004DE8DE /* SecondMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BB5254FF898004DE8DE /* SecondMainViewController.swift */; };
+		56D12BBA2550265B004DE8DE /* SecondMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D12BB92550265B004DE8DE /* SecondMain.storyboard */; };
+		56D12BBE255026E8004DE8DE /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BBD255026E8004DE8DE /* MainTableVC.swift */; };
+		56D12BC325503820004DE8DE /* TradingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BC225503820004DE8DE /* TradingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		56D12BAA254FF092004DE8DE /* firstChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstChildViewController.swift; sourceTree = "<group>"; };
 		56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildViewController.swift; sourceTree = "<group>"; };
 		56D12BB5254FF898004DE8DE /* SecondMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondMainViewController.swift; sourceTree = "<group>"; };
+		56D12BB92550265B004DE8DE /* SecondMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondMain.storyboard; sourceTree = "<group>"; };
+		56D12BBD255026E8004DE8DE /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
+		56D12BC225503820004DE8DE /* TradingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingCell.swift; sourceTree = "<group>"; };
 		BCCCB9C80E005A7FF231939E /* Pods-carrot-market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carrot-market.release.xcconfig"; path = "Target Support Files/Pods-carrot-market/Pods-carrot-market.release.xcconfig"; sourceTree = "<group>"; };
 		DC5541CAB8EC6896FC05D4BF /* Pods_carrot_market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carrot_market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +105,9 @@
 				56D12BA0254FEBCB004DE8DE /* SecondTradingViewController.swift */,
 				56D12BAA254FF092004DE8DE /* firstChildViewController.swift */,
 				56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */,
+				56D12BB92550265B004DE8DE /* SecondMain.storyboard */,
+				56D12BBD255026E8004DE8DE /* MainTableVC.swift */,
+				56D12BC225503820004DE8DE /* TradingCell.swift */,
 				560A09AA254BE224008A4DCB /* Assets.xcassets */,
 				560A09AC254BE224008A4DCB /* LaunchScreen.storyboard */,
 				560A09AF254BE224008A4DCB /* Info.plist */,
@@ -175,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				560A09AE254BE224008A4DCB /* LaunchScreen.storyboard in Resources */,
+				56D12BBA2550265B004DE8DE /* SecondMain.storyboard in Resources */,
 				560A09AB254BE224008A4DCB /* Assets.xcassets in Resources */,
 				560A09A9254BE224008A4DCB /* Main.storyboard in Resources */,
 			);
@@ -238,7 +248,9 @@
 				565BF2D2254E76EC00442ECD /* Item.swift in Sources */,
 				56D12BAB254FF092004DE8DE /* firstChildViewController.swift in Sources */,
 				565BF2CF254E766900442ECD /* ItemTableViewCell.swift in Sources */,
+				56D12BC325503820004DE8DE /* TradingCell.swift in Sources */,
 				560A09A4254BE224008A4DCB /* SceneDelegate.swift in Sources */,
+				56D12BBE255026E8004DE8DE /* MainTableVC.swift in Sources */,
 				56D12BAE254FF0CB004DE8DE /* SecondChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
