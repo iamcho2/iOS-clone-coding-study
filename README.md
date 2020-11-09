@@ -29,8 +29,9 @@
 | 날짜                    | 내용                                                         |
 | ----------------------- | ------------------------------------------------------------ |
 | 2020/10/07              | 진행방식 결정                                                |
-| 2020/10/11 ~ 2020/11/01 | [`당근마켓` clone 1차](https://github.com/iamcho2/iOS-clone-coding-study/tree/main/carrot-market) |
-| 2020/11/02 ~            | [`당근마켓` clone 2차 (develop]()                            |
+| 2020/10/11 ~ 2020/11/01 | [`당근마켓` clone 1주차](https://github.com/iamcho2/iOS-clone-coding-study/tree/main/carrot-market) |
+| 2020/11/02 ~ 2020/11/08 | [`당근마켓` clone 2주차](https://github.com/iamcho2/iOS-clone-coding-study/tree/main/carrot-market-week2) |
+| 2020/11/09 ~ 2020/11/15 | [`당근마켓` clone 3주차](https://github.com/iamcho2/iOS-clone-coding-study/tree/main/carrot-market-week3) |
 
 
 
