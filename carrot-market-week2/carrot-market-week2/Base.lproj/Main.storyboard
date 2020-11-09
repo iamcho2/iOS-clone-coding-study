@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="carrot_market_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2Q-V5-cCk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-yH-fKR">
+                                        <rect key="frame" x="20" y="60" width="90" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="공릉1동  ">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIF-P7-ln5">
+                                        <rect key="frame" x="285.5" y="60" width="108.5" height="25"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMl-mq-4qT">
+                                                <rect key="frame" x="0.0" y="0.0" width="24.5" height="25"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-la-voW">
+                                                <rect key="frame" x="41.5" y="0.0" width="25.5" height="25"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="list.bullet" catalog="system" symbolScale="large"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-CU-mAC">
+                                                <rect key="frame" x="84" y="0.0" width="24.5" height="25"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7rB-yH-fKR" firstAttribute="top" secondItem="X2Q-V5-cCk" secondAttribute="top" constant="60" id="4X0-kF-is1"/>
+                                    <constraint firstAttribute="bottom" secondItem="KIF-P7-ln5" secondAttribute="bottom" constant="15" id="932-hJ-XnK"/>
+                                    <constraint firstAttribute="trailing" secondItem="KIF-P7-ln5" secondAttribute="trailing" constant="20" id="9Ns-eR-Uxf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="BGw-XQ-pEk"/>
+                                    <constraint firstAttribute="bottom" secondItem="7rB-yH-fKR" secondAttribute="bottom" constant="15" id="CTv-Fw-BKP"/>
+                                    <constraint firstAttribute="height" constant="100" id="VWn-2W-hKq"/>
+                                    <constraint firstItem="7rB-yH-fKR" firstAttribute="leading" secondItem="X2Q-V5-cCk" secondAttribute="leading" constant="20" id="fF3-FV-dc1"/>
+                                    <constraint firstItem="KIF-P7-ln5" firstAttribute="top" secondItem="X2Q-V5-cCk" secondAttribute="top" constant="60" id="tT0-K8-kf9"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-WW-cRV">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <connections>
+                                    <segue destination="FPc-BP-A3e" kind="embed" id="GWn-wE-cqJ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X2Q-V5-cCk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DJZ-AG-Zsv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RfO-WW-cRV" secondAttribute="bottom" id="Dfs-0n-o52"/>
+                            <constraint firstItem="X2Q-V5-cCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fnv-QU-L15"/>
+                            <constraint firstItem="RfO-WW-cRV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G5c-BQ-1bU"/>
+                            <constraint firstItem="X2Q-V5-cCk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XWx-L1-uzm"/>
+                            <constraint firstItem="RfO-WW-cRV" firstAttribute="top" secondItem="X2Q-V5-cCk" secondAttribute="bottom" id="ajV-Y1-cSd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RfO-WW-cRV" secondAttribute="trailing" id="o0M-mD-oPw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainContainerView" destination="RfO-WW-cRV" id="Ety-Ij-tnb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="79"/>
+        </scene>
+        <!--SegVC-->
+        <scene sceneID="iNr-t8-LPT">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="FPc-BP-A3e" customClass="segVC" customModule="carrot_market_week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5X-11-tZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bLg-B7-VWd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bLg-B7-VWd" secondAttribute="bottom" id="Jhw-E9-TOX"/>
+                            <constraint firstItem="bLg-B7-VWd" firstAttribute="leading" secondItem="Z5X-11-tZM" secondAttribute="leading" id="Q6T-gw-0FE"/>
+                            <constraint firstAttribute="trailing" secondItem="bLg-B7-VWd" secondAttribute="trailing" id="eWK-5I-Wy3"/>
+                            <constraint firstItem="bLg-B7-VWd" firstAttribute="top" secondItem="Z5X-11-tZM" secondAttribute="top" id="f6X-K7-fYa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemTableView" destination="bLg-B7-VWd" id="FBU-W2-fOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6sw-3y-gLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
