@@ -8,5 +8,11 @@
 import UIKit
 
 class ItemPhotoCell: UICollectionViewCell {
+    static let identifier = "ItemPhotoCell"
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    func setImage(imageName: String){
+        photoImageView.image = UIImage(named: imageName)
+    }
     
 }

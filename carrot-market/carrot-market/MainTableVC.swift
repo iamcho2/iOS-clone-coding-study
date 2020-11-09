@@ -27,12 +27,17 @@ class MainTableVC: UIViewController {
         }
     }
     var items:[Item] = []
+    var posts:[Post] = []
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    var selectedIndex = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setItemData()
+        setPostData()
         mainTableView.dataSource = self
         mainTableView.delegate = self
     }
@@ -48,6 +53,24 @@ class MainTableVC: UIViewController {
             Item(itemImageName: "img6", title: "당근마켓 클론코딩 해봅시다", location: "중계2.3동", time: "7일 전", price: "1,227")
         ])
     }
+    
+    func setPostData(){
+        posts.append(contentsOf: [
+            Post(category: "  동네맛집  ", nickname: "유데이", location: "공릉동", certificationNum: "2", time: "3분 전", content: "우와 오늘 맛집 쩌구 어쩌구 쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img1", commentNum: 0),
+            Post(category: "  건강  ", nickname: "안녕허세요", location: "하계동", certificationNum: "2", time: "방금 전", content: "우와 오늘 맛집 발견했어요 !!!!! 집 근처라 중고거래할때 매번 참존숯불바베큐 묵동점 앞에서 가능하다고 말씀 드렸는데 , 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img7", commentNum: 4),
+            Post(category: "  우리동네사진전  ", nickname: "김이박최", location: "중계2.3동", certificationNum: "2", time: "어제", content: "우와 오늘 맛집 쩌구 어쩌구 저쩌구 쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img5", commentNum: 20),
+            Post(category: "  동네맛집  ", nickname: "유데이", location: "공릉동", certificationNum: "2", time: "3분 전", content: "우와 오늘 맛집 쩌구 어쩌구 쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img1", commentNum: 0),
+            Post(category: "  동네맛집  ", nickname: "유데이", location: "공릉동", certificationNum: "2", time: "3분 전", content: "우와 오늘 맛집 발견했어요 !!!!! 집 근처라 중고거래할때 매번 참존숯불바베큐 묵동점 앞에서 가능하다고 말씀 드렸는데 , 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img1", commentNum: 4),
+            Post(category: "  동네맛집  ", nickname: "유데이", location: "공릉동", certificationNum: "2", time: "3분 전", content: "우와 오늘 맛집 쩌구 어쩌구 저쩌구 쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img1", commentNum: 4),
+            Post(category: "  동네맛집  ", nickname: "유데이", location: "공릉동", certificationNum: "2", time: "3분 전", content: "우와 오늘 맛집 쩌구 어쩌구 쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구 저쩌구 어쩌구어쩌구 저쩌구 어쩌구 저쩌구", profileImageName: "img1", commentNum: 0),
+        ])
+    }
+    
+    @IBAction func didIndexChanged(_ sender: UISegmentedControl) {
+        selectedIndex.toggle()
+        print(selectedIndex)
+        mainTableView.reloadData()
+    }
 }
 
 extension MainTableVC: UITableViewDelegate {
@@ -61,18 +84,46 @@ extension MainTableVC: UITableViewDelegate {
         let percentage = (offset-100)/50
         upperHeaderView.alpha = percentage
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(selectedIndex){
+            let selectedItem = items[indexPath.row]
+            if let dvc = self.storyboard?.instantiateViewController(identifier: "ItemInfoViewController") as? ItemInfoViewController {
+                        dvc.item = selectedItem
+                self.navigationController?.pushViewController(dvc, animated: true)
+                
+            }
+        }
+    }
+    
 }
 
 extension MainTableVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        if(selectedIndex){
+            return items.count
+        }else{
+            return posts.count
+        }
+       
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TradingCell.identifier) as? TradingCell else {
-            return UITableViewCell()
+        if(selectedIndex){
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TradingCell.identifier) as? TradingCell else {
+                return UITableViewCell()
+            }
+            cell.setCell(item: items[indexPath.row])
+            return cell
+        }else{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.identifier) as? PostCell else {
+                return UITableViewCell()
+            }
+            cell.setPostCell(post: posts[indexPath.row])
+            return cell
         }
-        cell.setCell(item: items[indexPath.row])
-        return cell
     }
+    
+    
 }

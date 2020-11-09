@@ -417,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="-1052" y="1365"/>
         </scene>
-        <!--MainTableVC-->
+        <!--NavViewController-->
         <scene sceneID="lKv-12-NTw">
             <objects>
-                <viewControllerPlaceholder storyboardName="SecondMain" referencedIdentifier="MainTableVC" id="nv1-3O-YfT" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SecondMain" referencedIdentifier="NavViewController" id="nv1-3O-YfT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="El8-pD-9l1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oC-sv-Ztz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

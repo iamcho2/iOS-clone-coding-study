@@ -25,6 +25,11 @@
 		56D12BBA2550265B004DE8DE /* SecondMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56D12BB92550265B004DE8DE /* SecondMain.storyboard */; };
 		56D12BBE255026E8004DE8DE /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BBD255026E8004DE8DE /* MainTableVC.swift */; };
 		56D12BC325503820004DE8DE /* TradingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D12BC225503820004DE8DE /* TradingCell.swift */; };
+		56EC2CD7255832E5007BF003 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC2CD6255832E5007BF003 /* Post.swift */; };
+		56EC2CDA255833D9007BF003 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC2CD9255833D9007BF003 /* PostCell.swift */; };
+		56EC2CDD255851DF007BF003 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC2CDC255851DF007BF003 /* ItemInfoViewController.swift */; };
+		56EC2CE025585224007BF003 /* ItemPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC2CDF25585224007BF003 /* ItemPhotoCell.swift */; };
+		56EC2CE425585AAC007BF003 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC2CE325585AAC007BF003 /* NavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		56D12BB92550265B004DE8DE /* SecondMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondMain.storyboard; sourceTree = "<group>"; };
 		56D12BBD255026E8004DE8DE /* MainTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
 		56D12BC225503820004DE8DE /* TradingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingCell.swift; sourceTree = "<group>"; };
+		56EC2CD6255832E5007BF003 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		56EC2CD9255833D9007BF003 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		56EC2CDC255851DF007BF003 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
+		56EC2CDF25585224007BF003 /* ItemPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPhotoCell.swift; sourceTree = "<group>"; };
+		56EC2CE325585AAC007BF003 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		BCCCB9C80E005A7FF231939E /* Pods-carrot-market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-carrot-market.release.xcconfig"; path = "Target Support Files/Pods-carrot-market/Pods-carrot-market.release.xcconfig"; sourceTree = "<group>"; };
 		DC5541CAB8EC6896FC05D4BF /* Pods_carrot_market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_carrot_market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,8 +116,13 @@
 				56D12BAA254FF092004DE8DE /* firstChildViewController.swift */,
 				56D12BAD254FF0CB004DE8DE /* SecondChildViewController.swift */,
 				56D12BB92550265B004DE8DE /* SecondMain.storyboard */,
+				56EC2CE325585AAC007BF003 /* NavViewController.swift */,
 				56D12BBD255026E8004DE8DE /* MainTableVC.swift */,
+				56EC2CD6255832E5007BF003 /* Post.swift */,
 				56D12BC225503820004DE8DE /* TradingCell.swift */,
+				56EC2CD9255833D9007BF003 /* PostCell.swift */,
+				56EC2CDC255851DF007BF003 /* ItemInfoViewController.swift */,
+				56EC2CDF25585224007BF003 /* ItemPhotoCell.swift */,
 				560A09AA254BE224008A4DCB /* Assets.xcassets */,
 				560A09AC254BE224008A4DCB /* LaunchScreen.storyboard */,
 				560A09AF254BE224008A4DCB /* Info.plist */,
@@ -240,10 +255,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D12BB6254FF898004DE8DE /* SecondMainViewController.swift in Sources */,
+				56EC2CDD255851DF007BF003 /* ItemInfoViewController.swift in Sources */,
 				56D12BA1254FEBCB004DE8DE /* SecondTradingViewController.swift in Sources */,
 				560A09A6254BE224008A4DCB /* ViewController.swift in Sources */,
+				56EC2CE425585AAC007BF003 /* NavViewController.swift in Sources */,
 				560A09A2254BE223008A4DCB /* AppDelegate.swift in Sources */,
 				565BF2CC254E72E300442ECD /* NeighborViewController.swift in Sources */,
+				56EC2CE025585224007BF003 /* ItemPhotoCell.swift in Sources */,
+				56EC2CD7255832E5007BF003 /* Post.swift in Sources */,
 				565BF2C9254E72D900442ECD /* TradingViewController.swift in Sources */,
 				565BF2D2254E76EC00442ECD /* Item.swift in Sources */,
 				56D12BAB254FF092004DE8DE /* firstChildViewController.swift in Sources */,
@@ -252,6 +271,7 @@
 				560A09A4254BE224008A4DCB /* SceneDelegate.swift in Sources */,
 				56D12BBE255026E8004DE8DE /* MainTableVC.swift in Sources */,
 				56D12BAE254FF0CB004DE8DE /* SecondChildViewController.swift in Sources */,
+				56EC2CDA255833D9007BF003 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
