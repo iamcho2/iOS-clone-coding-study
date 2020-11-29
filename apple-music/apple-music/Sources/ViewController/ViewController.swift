@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var newsArray = NewsData()
     var gottaHearArray = GottaHearData()
+    var moodArray = MoodData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(newsCellNib, forCellReuseIdentifier: NewsTableViewCell.identifier)
         let gottaHearCellNib = UINib(nibName: "GottaHearTableViewCell", bundle: nil)
         self.mainTableView.register(gottaHearCellNib, forCellReuseIdentifier: GottaHearTableViewCell.identifier)
+        let moodCellNib = UINib(nibName: "MoodTableViewCell", bundle: nil)
+        self.mainTableView.register(moodCellNib, forCellReuseIdentifier: MoodTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -45,10 +48,12 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(indexPath.row == 0){
+        if(indexPath.row == 0) {
             return 365
-        }else if (indexPath.row == 1){
+        }else if(indexPath.row == 1) {
             return 305
+        }else if(indexPath.row == 2) {
+            return 217
         }else{
             return 0
         }
@@ -66,6 +71,13 @@ extension ViewController: UITableViewDataSource{
         } else if (indexPath.row == 1) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: GottaHearTableViewCell.identifier) as? GottaHearTableViewCell {
                 let rowArray = gottaHearArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        } else if (indexPath.row == 2) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: MoodTableViewCell.identifier) as? MoodTableViewCell {
+                let rowArray = moodArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell
