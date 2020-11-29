@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var gottaHearArray = GottaHearData()
     var moodArray = MoodData()
     var weekendArray = WeekendData()
+    var hotTrackArray = HotTrackData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(gottaHearCellNib, forCellReuseIdentifier: GottaHearTableViewCell.identifier)
         let moodCellNib = UINib(nibName: "MoodTableViewCell", bundle: nil)
         self.mainTableView.register(moodCellNib, forCellReuseIdentifier: MoodTableViewCell.identifier)
+        let hotTrackCellNib = UINib(nibName: "HotTrackTableViewCell", bundle: nil)
+        self.mainTableView.register(hotTrackCellNib, forCellReuseIdentifier: HotTrackTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -57,6 +60,8 @@ extension ViewController: UITableViewDataSource{
             return 217
         }else if(indexPath.row == 3) {
             return 305
+        }else if(indexPath.row == 4) {
+            return 320
         }else{
             return 0
         }
@@ -88,6 +93,13 @@ extension ViewController: UITableViewDataSource{
         }else if (indexPath.row == 3) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: GottaHearTableViewCell.identifier) as? GottaHearTableViewCell {
                 let rowArray = weekendArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 4) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: HotTrackTableViewCell.identifier) as? HotTrackTableViewCell {
+                let rowArray = hotTrackArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell

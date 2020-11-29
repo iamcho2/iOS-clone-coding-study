@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HotTrackCollectionViewCell" customModule="apple_music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXV-is-KuC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="evC-yl-b3f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="evC-yl-b3f" secondAttribute="bottom" id="V1D-Z5-NXd"/>
+                            <constraint firstAttribute="trailing" secondItem="evC-yl-b3f" secondAttribute="trailing" id="ovQ-wk-Fp5"/>
+                            <constraint firstItem="evC-yl-b3f" firstAttribute="top" secondItem="EXV-is-KuC" secondAttribute="top" id="tQ4-d8-yJC"/>
+                            <constraint firstItem="evC-yl-b3f" firstAttribute="leading" secondItem="EXV-is-KuC" secondAttribute="leading" id="zzW-vR-KHX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="EXV-is-KuC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7rl-iq-Pk0"/>
+                <constraint firstAttribute="bottom" secondItem="EXV-is-KuC" secondAttribute="bottom" id="c1g-2Q-8DA"/>
+                <constraint firstAttribute="trailing" secondItem="EXV-is-KuC" secondAttribute="trailing" id="hrd-Sb-PkD"/>
+                <constraint firstItem="EXV-is-KuC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qLd-TC-kmo"/>
+            </constraints>
+            <connections>
+                <outlet property="songTableView" destination="evC-yl-b3f" id="C8G-bm-qgW"/>
+            </connections>
+            <point key="canvasLocation" x="-55.072463768115945" y="99.776785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
