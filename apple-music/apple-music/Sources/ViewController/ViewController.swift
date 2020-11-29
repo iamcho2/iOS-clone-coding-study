@@ -57,6 +57,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(interviewCellNib, forCellReuseIdentifier: InterviewTableViewCell.identifier)
         let soonCellNib = UINib(nibName: "SoonTableViewCell", bundle: nil)
         self.mainTableView.register(soonCellNib, forCellReuseIdentifier: SoonTableViewCell.identifier)
+        let exploreCellNib = UINib(nibName: "ExploreTableViewCell", bundle: nil)
+        self.mainTableView.register(exploreCellNib, forCellReuseIdentifier: ExploreTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -72,7 +74,7 @@ class ViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 14
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -102,6 +104,8 @@ extension ViewController: UITableViewDataSource{
             return 230
         }else if(indexPath.row == 12) {
             return 305
+        }else if(indexPath.row == 13) {
+            return 225
         }else{
             return 0
         }
@@ -197,6 +201,11 @@ extension ViewController: UITableViewDataSource{
             if let cell = tableView.dequeueReusableCell(withIdentifier: SoonTableViewCell.identifier) as? SoonTableViewCell {
                 let rowArray = soonArray.objectsArray
                 cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 13) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: ExploreTableViewCell.identifier) as? ExploreTableViewCell {
                 
                 return cell
             }
