@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
+    @IBOutlet weak var albumThumbImageView: UIImageView!
     
     var newsArray = NewsData()
     var gottaHearArray = GottaHearData()
@@ -27,6 +28,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        albumThumbImageView.clipsToBounds = true
+        albumThumbImageView.layer.cornerRadius = 5
+        albumThumbImageView.layer.shadowColor = UIColor.black.cgColor
+        albumThumbImageView.layer.shadowOpacity = 1
+        albumThumbImageView.layer.shadowOffset = CGSize.zero
+        albumThumbImageView.layer.shadowRadius = 3
+        
         
         // 네비게이션 바 .large
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -105,7 +113,7 @@ extension ViewController: UITableViewDataSource{
         }else if(indexPath.row == 12) {
             return 305
         }else if(indexPath.row == 13) {
-            return 225
+            return 240
         }else{
             return 0
         }
