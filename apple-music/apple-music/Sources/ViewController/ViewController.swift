@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var lovingArray = LovingData()
     var easyArray = EasyData()
     var interviewArray = InterviewData()
+    var soonArray = SoonData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(easyCellNib, forCellReuseIdentifier: EasyTableViewCell.identifier)
         let interviewCellNib = UINib(nibName: "InterviewTableViewCell", bundle: nil)
         self.mainTableView.register(interviewCellNib, forCellReuseIdentifier: InterviewTableViewCell.identifier)
+        let soonCellNib = UINib(nibName: "SoonTableViewCell", bundle: nil)
+        self.mainTableView.register(soonCellNib, forCellReuseIdentifier: SoonTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -69,7 +72,7 @@ class ViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 17
+        return 13
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -97,6 +100,8 @@ extension ViewController: UITableViewDataSource{
             return 305
         }else if(indexPath.row == 11) {
             return 230
+        }else if(indexPath.row == 12) {
+            return 305
         }else{
             return 0
         }
@@ -184,6 +189,13 @@ extension ViewController: UITableViewDataSource{
         }else if (indexPath.row == 11) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: InterviewTableViewCell.identifier) as? InterviewTableViewCell {
                 let rowArray = interviewArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 12) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: SoonTableViewCell.identifier) as? SoonTableViewCell {
+                let rowArray = soonArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell
