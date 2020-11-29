@@ -31,6 +31,9 @@
 		562F6A6E25738DCD00C50C97 /* MoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562F6A6C25738DCD00C50C97 /* MoodCollectionViewCell.xib */; };
 		562F6A712573901F00C50C97 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6A702573901F00C50C97 /* Mood.swift */; };
 		562F6A742573902800C50C97 /* MoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6A732573902800C50C97 /* MoodData.swift */; };
+		562F6A7B257393C500C50C97 /* WeekendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6A7A257393C500C50C97 /* WeekendData.swift */; };
+		562F6A802573947600C50C97 /* WeekendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6A7E2573947600C50C97 /* WeekendTableViewCell.swift */; };
+		562F6A812573947600C50C97 /* WeekendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562F6A7F2573947600C50C97 /* WeekendTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		562F6A6C25738DCD00C50C97 /* MoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCollectionViewCell.xib; sourceTree = "<group>"; };
 		562F6A702573901F00C50C97 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		562F6A732573902800C50C97 /* MoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodData.swift; sourceTree = "<group>"; };
+		562F6A7A257393C500C50C97 /* WeekendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendData.swift; sourceTree = "<group>"; };
+		562F6A7E2573947600C50C97 /* WeekendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekendTableViewCell.swift; sourceTree = "<group>"; };
+		562F6A7F2573947600C50C97 /* WeekendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeekendTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				562F6A2F2572107000C50C97 /* News */,
 				562F6A432572A59F00C50C97 /* GottaHear */,
 				562F6A6025738D9200C50C97 /* Mood */,
+				562F6A7D2573944D00C50C97 /* Weekend */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 				562F6A3E25721D4800C50C97 /* NewsData.swift */,
 				562F6A5325735E2D00C50C97 /* GottaHearData.swift */,
 				562F6A732573902800C50C97 /* MoodData.swift */,
+				562F6A7A257393C500C50C97 /* WeekendData.swift */,
 			);
 			path = FakeData;
 			sourceTree = "<group>";
@@ -207,6 +215,15 @@
 				562F6A6C25738DCD00C50C97 /* MoodCollectionViewCell.xib */,
 			);
 			path = Mood;
+			sourceTree = "<group>";
+		};
+		562F6A7D2573944D00C50C97 /* Weekend */ = {
+			isa = PBXGroup;
+			children = (
+				562F6A7E2573947600C50C97 /* WeekendTableViewCell.swift */,
+				562F6A7F2573947600C50C97 /* WeekendTableViewCell.xib */,
+			);
+			path = Weekend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +288,7 @@
 				562F69DA257157D400C50C97 /* LaunchScreen.storyboard in Resources */,
 				562F69D7257157D300C50C97 /* Assets.xcassets in Resources */,
 				562F6A6E25738DCD00C50C97 /* MoodCollectionViewCell.xib in Resources */,
+				562F6A812573947600C50C97 /* WeekendTableViewCell.xib in Resources */,
 				562F6A502572A60200C50C97 /* GottaHearTableViewCell.xib in Resources */,
 				562F6A212572103100C50C97 /* NewsCollectionViewCell.xib in Resources */,
 				562F6A2B2572106300C50C97 /* NewsTableViewCell.xib in Resources */,
@@ -292,8 +310,10 @@
 				562F69CE257157D000C50C97 /* AppDelegate.swift in Sources */,
 				562F6A4F2572A60200C50C97 /* GottaHearTableViewCell.swift in Sources */,
 				562F6A2C2572106300C50C97 /* NewsTableViewCell.swift in Sources */,
+				562F6A802573947600C50C97 /* WeekendTableViewCell.swift in Sources */,
 				562F6A5725735E3B00C50C97 /* GottaHear.swift in Sources */,
 				562F69D0257157D000C50C97 /* SceneDelegate.swift in Sources */,
+				562F6A7B257393C500C50C97 /* WeekendData.swift in Sources */,
 				562F6A34257216C700C50C97 /* NewsCollectionViewCell.swift in Sources */,
 				562F6A5425735E2D00C50C97 /* GottaHearData.swift in Sources */,
 				562F6A712573901F00C50C97 /* Mood.swift in Sources */,

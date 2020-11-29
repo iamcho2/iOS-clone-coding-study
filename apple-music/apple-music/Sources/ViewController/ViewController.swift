@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var newsArray = NewsData()
     var gottaHearArray = GottaHearData()
     var moodArray = MoodData()
+    var weekendArray = WeekendData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,8 @@ extension ViewController: UITableViewDataSource{
             return 305
         }else if(indexPath.row == 2) {
             return 217
+        }else if(indexPath.row == 3) {
+            return 305
         }else{
             return 0
         }
@@ -78,6 +81,13 @@ extension ViewController: UITableViewDataSource{
         } else if (indexPath.row == 2) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: MoodTableViewCell.identifier) as? MoodTableViewCell {
                 let rowArray = moodArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 3) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: GottaHearTableViewCell.identifier) as? GottaHearTableViewCell {
+                let rowArray = weekendArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell
