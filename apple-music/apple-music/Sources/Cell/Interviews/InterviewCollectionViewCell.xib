@@ -1,21 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="InterviewCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="interviewCollectionViewCell" id="gTV-IL-0wX" customClass="InterviewCollectionViewCell" customModule="apple_music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-Fq-mOA">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img5" translatesAutoresizingMaskIntoConstraints="NO" id="nJK-Hn-H5S">
+                                <rect key="frame" x="0.0" y="5" width="180" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MNN-Al-9ec"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billy Corgan of The Smashing Pumpkins of something" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoB-0L-HwR">
+                                <rect key="frame" x="5" y="110" width="170" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Smashing Pumpkins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bD7-y8-JKK">
+                                <rect key="frame" x="5" y="143.5" width="170" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nJK-Hn-H5S" secondAttribute="trailing" id="Sr6-Bm-yRO"/>
+                            <constraint firstItem="bD7-y8-JKK" firstAttribute="top" secondItem="AoB-0L-HwR" secondAttribute="bottom" id="YEa-OF-9Dv"/>
+                            <constraint firstAttribute="trailing" secondItem="bD7-y8-JKK" secondAttribute="trailing" constant="5" id="b2G-Vy-zbb"/>
+                            <constraint firstItem="nJK-Hn-H5S" firstAttribute="leading" secondItem="zDX-Fq-mOA" secondAttribute="leading" id="eVf-SN-IZC"/>
+                            <constraint firstItem="bD7-y8-JKK" firstAttribute="leading" secondItem="zDX-Fq-mOA" secondAttribute="leading" constant="5" id="eYl-60-frQ"/>
+                            <constraint firstItem="nJK-Hn-H5S" firstAttribute="top" secondItem="zDX-Fq-mOA" secondAttribute="top" constant="5" id="k43-jB-bPF"/>
+                            <constraint firstItem="AoB-0L-HwR" firstAttribute="leading" secondItem="zDX-Fq-mOA" secondAttribute="leading" constant="5" id="nbd-2L-RBe"/>
+                            <constraint firstAttribute="trailing" secondItem="AoB-0L-HwR" secondAttribute="trailing" constant="5" id="p48-tj-Ijr"/>
+                            <constraint firstItem="AoB-0L-HwR" firstAttribute="top" secondItem="nJK-Hn-H5S" secondAttribute="bottom" constant="5" id="qRd-tn-Nqx"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="zDX-Fq-mOA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2RE-vj-3Gd"/>
+                <constraint firstItem="zDX-Fq-mOA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JyP-mU-r25"/>
+                <constraint firstAttribute="trailing" secondItem="zDX-Fq-mOA" secondAttribute="trailing" id="Oix-Nq-e2r"/>
+                <constraint firstAttribute="bottom" secondItem="zDX-Fq-mOA" secondAttribute="bottom" id="xf6-hn-ZpB"/>
+            </constraints>
+            <connections>
+                <outlet property="interviewImageView" destination="nJK-Hn-H5S" id="FE4-L7-lnw"/>
+                <outlet property="intervieweeLabel" destination="bD7-y8-JKK" id="F3d-KY-gs4"/>
+                <outlet property="titleLabel" destination="AoB-0L-HwR" id="Aw5-Jo-g3Q"/>
+            </connections>
+            <point key="canvasLocation" x="141" y="100"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="img5" width="236" height="419"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
