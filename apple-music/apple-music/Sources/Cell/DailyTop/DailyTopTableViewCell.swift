@@ -1,5 +1,5 @@
 //
-//  LovingTableViewCell.swift
+//  DailyTopTableViewCell.swift
 //  apple-music
 //
 //  Created by 초이 on 2020/11/29.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class LovingTableViewCell: UITableViewCell {
-    static let identifier = "lovingTableViewCell"
-    @IBOutlet weak var lovingCollectionView: UICollectionView!
+class DailyTopTableViewCell: UITableViewCell {
+    static let identifier = "dailyTopTableViewCell"
+    @IBOutlet weak var dailyTopCollectionView: UICollectionView!
     
-    var loving: [GottaHear] = []
+    var dailyTop: [GottaHear] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,18 +22,18 @@ class LovingTableViewCell: UITableViewCell {
         flowLayout.itemSize = CGSize(width: 180, height: 230)
         flowLayout.minimumLineSpacing = 10
         flowLayout.minimumInteritemSpacing = 5.0
-        self.lovingCollectionView.collectionViewLayout = flowLayout
-        self.lovingCollectionView.showsHorizontalScrollIndicator = false
-        lovingCollectionView.decelerationRate = .fast
-        lovingCollectionView.isPagingEnabled = false
+        self.dailyTopCollectionView.collectionViewLayout = flowLayout
+        self.dailyTopCollectionView.showsHorizontalScrollIndicator = false
+        dailyTopCollectionView.decelerationRate = .fast
+        dailyTopCollectionView.isPagingEnabled = false
         
         // Comment if you set Datasource and delegate in .xib
-        self.lovingCollectionView.dataSource = self
-        self.lovingCollectionView.delegate = self
+        self.dailyTopCollectionView.dataSource = self
+        self.dailyTopCollectionView.delegate = self
         
         // Register the xib for tableview cell
         let cellNib = UINib(nibName: "GottaHearCollectionViewCell", bundle: nil)
-        self.lovingCollectionView.register(cellNib, forCellWithReuseIdentifier: GottaHearCollectionViewCell.identifier)
+        self.dailyTopCollectionView.register(cellNib, forCellWithReuseIdentifier: GottaHearCollectionViewCell.identifier)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -46,20 +46,20 @@ class LovingTableViewCell: UITableViewCell {
 }
 
 // MARK: - UICollectionViewDataSource
-extension LovingTableViewCell: UICollectionViewDataSource {
+extension DailyTopTableViewCell: UICollectionViewDataSource {
     // The data we passed from the TableView send them to the CollectionView Model
     func updateCellWith(row: [GottaHear]) {
-        self.loving = row
-        self.lovingCollectionView.reloadData()
+        self.dailyTop = row
+        self.dailyTopCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return loving.count
+        return 17
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GottaHearCollectionViewCell.identifier, for: indexPath) as? GottaHearCollectionViewCell {
-            cell.setCell(gottaHear: loving[indexPath.item])
+            cell.setCell(gottaHear: dailyTop[indexPath.item])
             return cell
         }
         return UICollectionViewCell()
@@ -69,7 +69,7 @@ extension LovingTableViewCell: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewFlowLayout
-extension LovingTableViewCell: UICollectionViewDelegateFlowLayout {
+extension DailyTopTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 180, height: 230)
     }
@@ -78,4 +78,3 @@ extension LovingTableViewCell: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 }
-

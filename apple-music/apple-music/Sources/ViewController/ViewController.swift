@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     var hotTrackArray = HotTrackData()
     var newMusicArray = NewMusicData()
     var radioArray = RadioData()
+    var dailyTopArray = DailyTopData()
+    var updateArray = UpdateData()
+    var lovingArray = LovingData()
+    var easyArray = EasyData()
+    var interviewArray = InterviewData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +44,16 @@ class ViewController: UIViewController {
         self.mainTableView.register(newMusicCellNib, forCellReuseIdentifier: NewMusicTableViewCell.identifier)
         let radioCellNib = UINib(nibName: "RadioTableViewCell", bundle: nil)
         self.mainTableView.register(radioCellNib, forCellReuseIdentifier: RadioTableViewCell.identifier)
+        let dailyTopCellNib = UINib(nibName: "DailyTopTableViewCell", bundle: nil)
+        self.mainTableView.register(dailyTopCellNib, forCellReuseIdentifier: DailyTopTableViewCell.identifier)
+        let updateCellNib = UINib(nibName: "UpdateTableViewCell", bundle: nil)
+        self.mainTableView.register(updateCellNib, forCellReuseIdentifier: UpdateTableViewCell.identifier)
+        let lovingCellNib = UINib(nibName: "LovingTableViewCell", bundle: nil)
+        self.mainTableView.register(lovingCellNib, forCellReuseIdentifier: LovingTableViewCell.identifier)
+        let easyCellNib = UINib(nibName: "EasyTableViewCell", bundle: nil)
+        self.mainTableView.register(easyCellNib, forCellReuseIdentifier: EasyTableViewCell.identifier)
+        let interviewCellNib = UINib(nibName: "InterviewTableViewCell", bundle: nil)
+        self.mainTableView.register(interviewCellNib, forCellReuseIdentifier: InterviewTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -71,6 +86,16 @@ extension ViewController: UITableViewDataSource{
         }else if(indexPath.row == 5) {
             return 545
         }else if(indexPath.row == 6) {
+            return 230
+        }else if(indexPath.row == 7) {
+            return 305
+        }else if(indexPath.row == 8) {
+            return 550
+        }else if(indexPath.row == 9) {
+            return 305
+        }else if(indexPath.row == 10) {
+            return 305
+        }else if(indexPath.row == 11) {
             return 230
         }else{
             return 0
@@ -124,6 +149,41 @@ extension ViewController: UITableViewDataSource{
         }else if (indexPath.row == 6) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: RadioTableViewCell.identifier) as? RadioTableViewCell {
                 let rowArray = radioArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 7) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: DailyTopTableViewCell.identifier) as? DailyTopTableViewCell {
+                let rowArray = dailyTopArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 8) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: UpdateTableViewCell.identifier) as? UpdateTableViewCell {
+                let rowArray = updateArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 9) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: LovingTableViewCell.identifier) as? LovingTableViewCell {
+                let rowArray = lovingArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 10) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: EasyTableViewCell.identifier) as? EasyTableViewCell {
+                let rowArray = easyArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 11) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: InterviewTableViewCell.identifier) as? InterviewTableViewCell {
+                let rowArray = interviewArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell
