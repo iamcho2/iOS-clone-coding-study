@@ -67,6 +67,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(soonCellNib, forCellReuseIdentifier: SoonTableViewCell.identifier)
         let exploreCellNib = UINib(nibName: "ExploreTableViewCell", bundle: nil)
         self.mainTableView.register(exploreCellNib, forCellReuseIdentifier: ExploreTableViewCell.identifier)
+        let weekendCellNib = UINib(nibName: "WeekendTableViewCell", bundle: nil)
+        self.mainTableView.register(weekendCellNib, forCellReuseIdentifier: WeekendTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -143,7 +145,7 @@ extension ViewController: UITableViewDataSource{
                 return cell
             }
         }else if (indexPath.row == 3) {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: GottaHearTableViewCell.identifier) as? GottaHearTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: WeekendTableViewCell.identifier) as? WeekendTableViewCell {
                 let rowArray = weekendArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
