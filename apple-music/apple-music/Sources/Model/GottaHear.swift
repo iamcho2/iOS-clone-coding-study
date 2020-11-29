@@ -13,7 +13,7 @@ struct GottaHear {
     var subTitle: String
     var gottaHearImageName: String
     
-    func makeGottaHearImage() -> UIImage?{
-        return UIImage(named: gottaHearImageName)
+    func makeNewsImage() -> UIImage?{
+        return UIImage(named: newsImageName)
     }
 }
