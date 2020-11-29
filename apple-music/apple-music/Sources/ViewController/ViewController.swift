@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var weekendArray = WeekendData()
     var hotTrackArray = HotTrackData()
     var newMusicArray = NewMusicData()
+    var radioArray = RadioData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(hotTrackCellNib, forCellReuseIdentifier: HotTrackTableViewCell.identifier)
         let newMusicCellNib = UINib(nibName: "NewMusicTableViewCell", bundle: nil)
         self.mainTableView.register(newMusicCellNib, forCellReuseIdentifier: NewMusicTableViewCell.identifier)
+        let radioCellNib = UINib(nibName: "RadioTableViewCell", bundle: nil)
+        self.mainTableView.register(radioCellNib, forCellReuseIdentifier: RadioTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -67,6 +70,8 @@ extension ViewController: UITableViewDataSource{
             return 320
         }else if(indexPath.row == 5) {
             return 545
+        }else if(indexPath.row == 6) {
+            return 230
         }else{
             return 0
         }
@@ -112,6 +117,13 @@ extension ViewController: UITableViewDataSource{
         }else if (indexPath.row == 5) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NewMusicTableViewCell.identifier) as? NewMusicTableViewCell {
                 let rowArray = newMusicArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 6) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: RadioTableViewCell.identifier) as? RadioTableViewCell {
+                let rowArray = radioArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell

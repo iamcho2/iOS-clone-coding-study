@@ -11,23 +11,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="moodCollectionViewCell" id="gTV-IL-0wX" customClass="MoodCollectionViewCell" customModule="apple_music" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="180" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="180" height="140"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="180" height="125"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="140"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRY-LB-UvG">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="125"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="140"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img12" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-Oe-sMJ">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="100"/>
+                                <rect key="frame" x="0.0" y="5" width="180" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="YvS-VF-rRe"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIq-Qa-svZ">
-                                <rect key="frame" x="5" y="102" width="170" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleeps,djkfblwkeubfalieufbwaeilufbe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIq-Qa-svZ">
+                                <rect key="frame" x="5" y="107" width="170" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                             <constraint firstItem="HIq-Qa-svZ" firstAttribute="leading" secondItem="HRY-LB-UvG" secondAttribute="leading" constant="5" id="5yU-xO-CES"/>
                             <constraint firstItem="Rbe-Oe-sMJ" firstAttribute="leading" secondItem="HRY-LB-UvG" secondAttribute="leading" id="Pu9-iR-0ck"/>
                             <constraint firstAttribute="trailing" secondItem="Rbe-Oe-sMJ" secondAttribute="trailing" id="SYz-Pt-NB4"/>
-                            <constraint firstItem="Rbe-Oe-sMJ" firstAttribute="top" secondItem="HRY-LB-UvG" secondAttribute="top" id="VFp-XH-Neq"/>
+                            <constraint firstItem="Rbe-Oe-sMJ" firstAttribute="top" secondItem="HRY-LB-UvG" secondAttribute="top" constant="5" id="VFp-XH-Neq"/>
                             <constraint firstAttribute="trailing" secondItem="HIq-Qa-svZ" secondAttribute="trailing" constant="5" id="abD-vX-47m"/>
                             <constraint firstItem="HIq-Qa-svZ" firstAttribute="top" secondItem="Rbe-Oe-sMJ" secondAttribute="bottom" constant="2" id="izJ-Pe-F0q"/>
                         </constraints>
