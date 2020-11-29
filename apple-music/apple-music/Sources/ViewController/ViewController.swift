@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var moodArray = MoodData()
     var weekendArray = WeekendData()
     var hotTrackArray = HotTrackData()
+    var newMusicArray = NewMusicData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
         self.mainTableView.register(moodCellNib, forCellReuseIdentifier: MoodTableViewCell.identifier)
         let hotTrackCellNib = UINib(nibName: "HotTrackTableViewCell", bundle: nil)
         self.mainTableView.register(hotTrackCellNib, forCellReuseIdentifier: HotTrackTableViewCell.identifier)
+        let newMusicCellNib = UINib(nibName: "NewMusicTableViewCell", bundle: nil)
+        self.mainTableView.register(newMusicCellNib, forCellReuseIdentifier: NewMusicTableViewCell.identifier)
         
         //tableView separator 없애기
         mainTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -62,6 +65,8 @@ extension ViewController: UITableViewDataSource{
             return 305
         }else if(indexPath.row == 4) {
             return 320
+        }else if(indexPath.row == 5) {
+            return 545
         }else{
             return 0
         }
@@ -100,6 +105,13 @@ extension ViewController: UITableViewDataSource{
         }else if (indexPath.row == 4) {
             if let cell = tableView.dequeueReusableCell(withIdentifier: HotTrackTableViewCell.identifier) as? HotTrackTableViewCell {
                 let rowArray = hotTrackArray.objectsArray
+                cell.updateCellWith(row: rowArray)
+                
+                return cell
+            }
+        }else if (indexPath.row == 5) {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NewMusicTableViewCell.identifier) as? NewMusicTableViewCell {
+                let rowArray = newMusicArray.objectsArray
                 cell.updateCellWith(row: rowArray)
                 
                 return cell

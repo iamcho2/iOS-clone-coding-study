@@ -43,6 +43,9 @@
 		562F6A9D25739A1900C50C97 /* HotTrackSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6A9B25739A1900C50C97 /* HotTrackSongTableViewCell.swift */; };
 		562F6A9E25739A1900C50C97 /* HotTrackSongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562F6A9C25739A1900C50C97 /* HotTrackSongTableViewCell.xib */; };
 		562F6AA22573A82200C50C97 /* HotTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6AA12573A82200C50C97 /* HotTrack.swift */; };
+		562F6AA82573B01C00C50C97 /* NewMusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 562F6AA62573B01C00C50C97 /* NewMusicTableViewCell.xib */; };
+		562F6AB62573B29D00C50C97 /* NewMusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6AB52573B29D00C50C97 /* NewMusicData.swift */; };
+		562F6ABA2573B6DD00C50C97 /* NewMusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F6AB92573B6DD00C50C97 /* NewMusicTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		562F6A9B25739A1900C50C97 /* HotTrackSongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotTrackSongTableViewCell.swift; sourceTree = "<group>"; };
 		562F6A9C25739A1900C50C97 /* HotTrackSongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotTrackSongTableViewCell.xib; sourceTree = "<group>"; };
 		562F6AA12573A82200C50C97 /* HotTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotTrack.swift; sourceTree = "<group>"; };
+		562F6AA62573B01C00C50C97 /* NewMusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewMusicTableViewCell.xib; sourceTree = "<group>"; };
+		562F6AB52573B29D00C50C97 /* NewMusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMusicData.swift; sourceTree = "<group>"; };
+		562F6AB92573B6DD00C50C97 /* NewMusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMusicTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,7 @@
 				562F6A6025738D9200C50C97 /* Mood */,
 				562F6A7D2573944D00C50C97 /* Weekend */,
 				562F6A8B257397BF00C50C97 /* HotTrack */,
+				562F6AAA2573B02000C50C97 /* NewMusic */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -213,6 +220,7 @@
 				562F6A732573902800C50C97 /* MoodData.swift */,
 				562F6A7A257393C500C50C97 /* WeekendData.swift */,
 				562F6A842573973100C50C97 /* HotTrackData.swift */,
+				562F6AB52573B29D00C50C97 /* NewMusicData.swift */,
 			);
 			path = FakeData;
 			sourceTree = "<group>";
@@ -259,6 +267,15 @@
 				562F6A9C25739A1900C50C97 /* HotTrackSongTableViewCell.xib */,
 			);
 			path = HotTrack;
+			sourceTree = "<group>";
+		};
+		562F6AAA2573B02000C50C97 /* NewMusic */ = {
+			isa = PBXGroup;
+			children = (
+				562F6AB92573B6DD00C50C97 /* NewMusicTableViewCell.swift */,
+				562F6AA62573B01C00C50C97 /* NewMusicTableViewCell.xib */,
+			);
+			path = NewMusic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +337,7 @@
 			files = (
 				562F6A6425738DAD00C50C97 /* MoodTableViewCell.xib in Resources */,
 				562F6A8F257397D100C50C97 /* HotTrackTableViewCell.xib in Resources */,
+				562F6AA82573B01C00C50C97 /* NewMusicTableViewCell.xib in Resources */,
 				562F6A9E25739A1900C50C97 /* HotTrackSongTableViewCell.xib in Resources */,
 				562F6A952573995100C50C97 /* HotTrackCollectionViewCell.xib in Resources */,
 				562F6A472572A5DF00C50C97 /* GottaHearCollectionViewCell.xib in Resources */,
@@ -348,9 +366,11 @@
 				562F69CE257157D000C50C97 /* AppDelegate.swift in Sources */,
 				562F6A4F2572A60200C50C97 /* GottaHearTableViewCell.swift in Sources */,
 				562F6AA22573A82200C50C97 /* HotTrack.swift in Sources */,
+				562F6AB62573B29D00C50C97 /* NewMusicData.swift in Sources */,
 				562F6A2C2572106300C50C97 /* NewsTableViewCell.swift in Sources */,
 				562F6A882573974000C50C97 /* HotTrackSong.swift in Sources */,
 				562F6A9D25739A1900C50C97 /* HotTrackSongTableViewCell.swift in Sources */,
+				562F6ABA2573B6DD00C50C97 /* NewMusicTableViewCell.swift in Sources */,
 				562F6A802573947600C50C97 /* WeekendTableViewCell.swift in Sources */,
 				562F6A5725735E3B00C50C97 /* GottaHear.swift in Sources */,
 				562F6A852573973100C50C97 /* HotTrackData.swift in Sources */,
