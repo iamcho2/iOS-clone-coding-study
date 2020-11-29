@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+struct Update {
+    var title: String
+    var subTitle: String
+    var updateImageName: String
+    
+    func makeUpdateImage() -> UIImage?{
+        return UIImage(named: updateImageName)
+    }
+}
