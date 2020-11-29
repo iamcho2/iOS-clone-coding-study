@@ -113,7 +113,7 @@ extension ViewController: UITableViewDataSource{
         }else if(indexPath.row == 12) {
             return 305
         }else if(indexPath.row == 13) {
-            return 240g
+            return 240
         }else{
             return 0
         }
