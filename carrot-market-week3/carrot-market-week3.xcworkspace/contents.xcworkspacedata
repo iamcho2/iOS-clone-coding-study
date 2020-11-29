@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/choyi/Github/iOS-clone-coding-study/carrot-market-week2 copy/carrot-market-week3.xcodeproj">
+      location = "group:carrot-market-week3.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

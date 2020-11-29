@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="gottaHearTableViewCell" rowHeight="305" id="KGk-i7-Jjw" customClass="GottaHearTableViewCell" customModule="apple_music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Gotta Hear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJN-E3-iFy">
+                        <rect key="frame" x="20" y="15" width="162" height="28"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gr-wG-nZM">
+                        <rect key="frame" x="344" y="13" width="50" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="See All">
+                            <color key="titleColor" systemColor="systemPinkColor"/>
+                        </state>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-ew-V1n">
+                        <rect key="frame" x="0.0" y="55" width="414" height="225"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ceN-pY-lW4">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7J-U8-Fay">
+                        <rect key="frame" x="20" y="0.0" width="374" height="0.5"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="0.5" id="6mB-JO-6r8"/>
+                            <constraint firstAttribute="height" constant="0.5" id="pWG-Us-XT8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I7J-U8-Fay" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="205-hZ-XAC"/>
+                    <constraint firstItem="lJN-E3-iFy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="D2V-dO-P71"/>
+                    <constraint firstAttribute="trailing" secondItem="9Gr-wG-nZM" secondAttribute="trailing" constant="20" id="DkE-ax-THO"/>
+                    <constraint firstItem="OTo-ew-V1n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J3B-8h-2XJ"/>
+                    <constraint firstAttribute="bottom" secondItem="OTo-ew-V1n" secondAttribute="bottom" constant="25" id="bkq-1t-jFV"/>
+                    <constraint firstItem="lJN-E3-iFy" firstAttribute="top" secondItem="I7J-U8-Fay" secondAttribute="top" constant="15" id="ghM-3N-glf"/>
+                    <constraint firstItem="OTo-ew-V1n" firstAttribute="top" secondItem="9Gr-wG-nZM" secondAttribute="bottom" constant="10" id="hF4-6D-oWP"/>
+                    <constraint firstItem="9Gr-wG-nZM" firstAttribute="centerY" secondItem="lJN-E3-iFy" secondAttribute="centerY" id="hOM-QY-z9E"/>
+                    <constraint firstAttribute="trailing" secondItem="I7J-U8-Fay" secondAttribute="trailing" constant="20" id="hXI-gc-CEI"/>
+                    <constraint firstItem="I7J-U8-Fay" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jA9-OQ-6KW"/>
+                    <constraint firstAttribute="trailing" secondItem="OTo-ew-V1n" secondAttribute="trailing" id="vhG-jh-uvK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="gottaHearCollectionView" destination="OTo-ew-V1n" id="ZMd-ZZ-Kg9"/>
+            </connections>
+            <point key="canvasLocation" x="-13.043478260869566" y="211.94196428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

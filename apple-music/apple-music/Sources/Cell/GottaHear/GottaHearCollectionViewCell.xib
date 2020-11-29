@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gottaHearCollectionViewCell" id="gTV-IL-0wX" customClass="GottaHearCollectionViewCell" customModule="apple_music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-qL-nwx">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img10" translatesAutoresizingMaskIntoConstraints="NO" id="DEx-jP-w9T">
+                                <rect key="frame" x="0.0" y="3" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DEx-jP-w9T" secondAttribute="height" multiplier="1:1" id="bsc-8b-YrT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Music Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RC-9B-Uam">
+                                <rect key="frame" x="5" y="188" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Music Pop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-m3-GSh">
+                                <rect key="frame" x="5" y="209" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DEx-jP-w9T" secondAttribute="trailing" id="GIw-nY-xiw"/>
+                            <constraint firstItem="JXR-m3-GSh" firstAttribute="trailing" secondItem="2RC-9B-Uam" secondAttribute="trailing" id="Jeh-kh-VnV"/>
+                            <constraint firstItem="2RC-9B-Uam" firstAttribute="top" secondItem="DEx-jP-w9T" secondAttribute="bottom" constant="5" id="LZX-ZN-bKc"/>
+                            <constraint firstItem="2RC-9B-Uam" firstAttribute="leading" secondItem="dPd-qL-nwx" secondAttribute="leading" constant="5" id="Yoe-dS-TEl"/>
+                            <constraint firstItem="JXR-m3-GSh" firstAttribute="top" secondItem="2RC-9B-Uam" secondAttribute="bottom" id="g94-pe-rBX"/>
+                            <constraint firstAttribute="trailing" secondItem="2RC-9B-Uam" secondAttribute="trailing" constant="5" id="i9K-ON-Bw1"/>
+                            <constraint firstItem="DEx-jP-w9T" firstAttribute="top" secondItem="dPd-qL-nwx" secondAttribute="top" constant="3" id="ia0-fP-LzH"/>
+                            <constraint firstItem="JXR-m3-GSh" firstAttribute="leading" secondItem="2RC-9B-Uam" secondAttribute="leading" id="kG7-aX-HrK"/>
+                            <constraint firstItem="DEx-jP-w9T" firstAttribute="leading" secondItem="dPd-qL-nwx" secondAttribute="leading" id="xRL-ag-A5Q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dPd-qL-nwx" secondAttribute="trailing" id="2GX-Ok-WzT"/>
+                <constraint firstItem="dPd-qL-nwx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2pG-MR-cUt"/>
+                <constraint firstItem="dPd-qL-nwx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4dT-RW-Tfg"/>
+                <constraint firstAttribute="bottom" secondItem="dPd-qL-nwx" secondAttribute="bottom" id="8P0-ed-Tev"/>
+            </constraints>
+            <size key="customSize" width="288" height="175"/>
+            <connections>
+                <outlet property="GottaHearSubTitle" destination="JXR-m3-GSh" id="O92-Cg-fLs"/>
+                <outlet property="GottaHearTitle" destination="2RC-9B-Uam" id="1go-32-zYJ"/>
+                <outlet property="gottaHearImageView" destination="DEx-jP-w9T" id="Hnt-X7-ehS"/>
+            </connections>
+            <point key="canvasLocation" x="311.59420289855075" y="141.29464285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img10" width="235" height="231"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
